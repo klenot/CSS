@@ -1,0 +1,9 @@
+html {
+  filter: invert(100%);
+}
+
+.dark-mode-btn{
+    cursor: pointer;
+}
+
+-> https://dev.to/ekaterina_vu/dark-mode-with-one-line-of-code-4lkm
