@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 4 - A 3D text card</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
+        *,
+        *::before,
+        *::after{
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(37deg, #1A2980, #26D0CE)
+        }
+
+        .content{
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 5em 3em;
+            position: relative;
+            display: grid;
+            align-content: center;
+            font-family: 'Oswald', sans-serif;
+            border-radius: 20px;
+
+            transition: transform 2s;
+
+            transform-style: preserve-3d;
+        }
+
+        .content::before{
+            content:"";
+            position: absolute;
+            z-index: 10;
+            inset: 0;
+            border: 1.5px solid black;
+            border-radius: 20px;
+
+            transform: translateZ(8rem);
+        }
+
+        .content::after{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            inset: 0;
+            background: linear-gradient(20deg, #e65c00, #F9D423);
+            border-radius: 20px;
+            transform: translateZ(-8rem);
+        }
+
+        .title{
+            position: relative;
+            z-index: 10;
+            font-size: 2rem;
+            line-height: 4rem;
+            letter-spacing: 0.1rem;
+
+
+            transform: translateZ(10rem);
+        }
+
+        .subtitle{
+            position: relative;
+            z-index: 10;
+            letter-spacing: 1px;
+            line-height: 1.5rem;
+            font-size: 0.80rem;
+
+            transform: translateZ(10rem);
+        }
+
+        .content:hover{
+            transform: rotateY(6deg) rotateX(10deg);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="subtitle"> CSS is the language we use to style an HTML document.
+            <br>It describes how HTML elements should be displayed.</p>
+        <h3 class="title">CSS</h3>
+    </div>
+</body>
+</html>
